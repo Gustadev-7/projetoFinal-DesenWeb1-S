@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #777777;
+}
+
+figcaption {
+    font-size: 12px;
+    color: #e9e9e9;
+    text-align: center;
+}
+
+/* Criando um menu dropdown vertical */
+nav{
+    width: 100%;
+}
+
+ul {
+    width: 100%;
+    list-style: none;
+    background: #777777;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #e1f154;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20pxs;
+}
+
+ul li a:hover {
+    font-weight: bold;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+figure {
+    width: 80px;
+    height: 60px;
+}
+
+/* Estilo para o botão */
+h2{
+    color: #e1f154;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn_clique_aqui {
+    width: 420px;
+    height: 55px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+    border-radius: 6px;
+    background-color: #e1f154;
+    color: #777777;
+    font-size: 20px;
+    cursor: pointer;
+    border: 4px solid black;
+    box-shadow: 4px 4px 0px black;
+    transition: transform 200ms ease-in-out;
+}
+
+.btn_clique_aqui:hover {
+    transform: scale(1.05);
+    color: white;
+    font-weight: bold;
+} 
+
+/* Estilo para o carrosel */
+.slider {
+    margin: 40px auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+}
+
+.slide img {
+    width: 800px;
+}
+
+.manual_navegation {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual_btn {
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual_btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual_btn:hover {
+    background-color: black;
+}
+
+#radio1:checked ~ .slide_um {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .slide_um {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .slide_um {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .slide_um {
+    margin-left: -75%;
+}
+
+.navegation_auto section {
+    border: 2px #e1f154;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navegation_auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navegation_auto section:not(:last-child) {
+    margin-top: 3px;
+    margin-right: 46px;
+}
+
+#radio1:checked ~ .navegation_auto .auto_btn1{
+    background-color: #e1f154;
+}
+
+#radio2:checked ~ .navegation_auto .auto_btn2{
+    background-color: #e1f154;
+}
+
+#radio3:checked ~ .navegation_auto .auto_btn3{
+    background-color: #e1f154;
+}
+
+#radio4:checked ~ .navegation_auto .auto_btn4{
+    background-color: #e1f154;
+}
+
+/* Estilo para a pagina sobre */
+.container_sobre {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    text-align: left;
+}
+
+.subtitulo h1 {
+    text-align: center;
+    color: #e1f154;
+    font-size: 32px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.container_sobre h2 {
+    color: #e1f154;
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e9e9e9;
+    margin-bottom: 20px;
+}
+
+.valores {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #e9e9e9;
+}
+
+.valores li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+address {
+    text-align: center;
+    color: #e9e9e9
+}
+
+/* Estilo para o footer */
+footer{
+    background-color: #777777;
+    color: #e1f154;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    margin-top: 80px;
+    width: 100%;
+}
+
+/* Tornando a página responsiva */
+@media (max-width:767px) {
+    nav ul li{
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero_banner {
+        align-items: center;
+        
+    }
+
+    .hero_banner img {
+        width: 100%;
+    }
+
+    .slider {
+        transform: scale(0.6);
+        margin: 20px -160px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    .hero_banner img {
+        width: 100%;
+    }
+
+    .slider {
+        transform: scale(1);
+        margin: 0 auto;
+    }
+}
+
+

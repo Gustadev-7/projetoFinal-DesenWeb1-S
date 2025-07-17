@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../imagens/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../estilos/layout.css">
+    <link rel="stylesheet" type="text/css" href="../estilos/formulario.css">
+    <title>Contato</title>
+</head>
+<main>
+    <body>
+
+        <!-- Barra de navegação -->
+        <nav>
+            <ul>
+                <a href="../index.html">
+                    <figure>
+                        <img src="../imagens/logo_icon_nobg.png" alt="Logotipo da loja" width="200px" height="200px" />
+                    </figure>
+                </a>
+
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre nós</a></li>
+                <li>
+                    <a href="catalogo.html">Catálogo ▾</a>
+                    <ul class="dropdown">
+                        <li><a href="catalogo.html">SUVs</a></li>
+                        <li><a href="catalogo.html">Sedans</a></li>
+                        <li><a href="catalogo.html">Esportivos</a></li>
+                        <li><a href="catalogo.html">Minivans</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <!-- Barra de navegação -->
+
+        <!-- Formulário -->
+        <section>
+            <h2>Formulário de Contato</h2>
+            <form id="formContato" action="respFormulario.html" method="post">
+                <label for="lbNome">Nome:</label>
+                <input id="ipNome" name="ipNome" type="text" required>
+                <label for="lbNumero">Número:</label>
+                <input id="ipNumero" name="ipNumero" type="number" required>
+                <label for="lbEmail">Email:</label required>
+                <input id="ipEmail" name="ipEmail" type="email">
+                <label for="lbMensagem">Mensagem:</label>
+                <textarea name="taMensagem" id="taMensagem" rows="5"></textarea>
+                <label for="lbTipos">Tipo do carro</label>
+                <select name="slTipos" id="slTipos">
+                    <option value="SUV">SUV</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Esportivo">Esportivo</option>
+                    <option value="Minivan">Minivan</option>
+                </select>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </form>
+        </section>
+
+        <section id="resultado" class="hidden"></section>
+        <!-- Formulário -->
+            
+        <script src="../scripts/formulario.js"></script>
+        
+</main>
+    <footer>
+        <b>DRIVEUP &COPY; 2025</b>
+    </footer>
+</body>
+</html>
